@@ -150,44 +150,44 @@ const firebaseConfig = {
   storageBucket: "eronix-3fbef.appspot.com",
   messagingSenderId: "32172690240",
   appId: "1:32172690240:web:dc4a8934fb423d3f8e08a5"
-};
-        firebase.initializeApp(firebaseConfig);
-
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                location.replace("forums.html")
-            }
-        })
-
-        async function register() {
-            const db = firebase.database();
-            const username = document.getElementById("pseudo").value
-            const email = document.getElementById("email").value
-            const password = document.getElementById("password").value
-            let userId, user;
-            try {
-                let userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password)
-                if (!userCredential?.user?.uid) {
-                    throw new Error("There is no UID!", userCredential);
-                }
-                user = userCredential.user;
-                userId = userCredential.user.uid;
-                console.log(`UID is: ${userId}`);
-
-                await db.ref("users/" + userId).set({
-                    user: username,
-                    uid: userId,
-                    email: email,
-                    date: new Date()
-                });
-                console.log(`write to RTDB finished`);
-                alert("Compte créer !")
-                return "success!"
-            } catch (ex) {
-                console.error(ex);
-                document.getElementById("error").innerHTML = ex.message
-            }
-        }
+  };
+  firebase.initializeApp(firebaseConfig);
+  
+  firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+          location.replace("./login");
+      }
+  })
+  
+  async function register() {
+      const db = firebase.database();
+      const username = document.getElementById("pseudo").value
+      const email = document.getElementById("email").value
+      const password = document.getElementById("password").value
+      let userId, user;
+      try {
+          let userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password)
+          if (! userCredential?.user?.uid) {
+              throw new Error("There is no UID!", userCredential);
+          }
+          user = userCredential.user;
+          userId = userCredential.user.uid;
+          console.log(`UID is: ${userId}`);
+  
+          await db.ref("users/" + userId).set({
+              user: username,
+              uid: userId,
+              email: email,
+              date: new Date()
+          });
+          console.log(`write to RTDB finished`);
+  
+          return "success!"
+      } catch(ex) {
+          console.error(ex);
+          document.getElementById("error").innerHTML = ex.message
+      }
+  }
     </script>
 
     <script>
