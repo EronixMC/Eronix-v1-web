@@ -3,14 +3,13 @@
 
 <head>
     <meta data-n-head="ssr" charset="utf-8">
-    <title>Eronix | RG-Minecraft</title>
+    <title>Eronix | Discussions Générales</title>
     <meta data-n-head="ssr" name="viewport" content="width=device-width, user-scalable=no">
     <meta data-n-head="ssr" data-hid="description" name="description" content="">
     <link href="./src/css/style.css" rel="stylesheet" />
     <link href="./src/css/police.css" rel="stylesheet" />
-    <link href="./src/css/news.css" rel="stylesheet" />
     <link href="./src/css/header.css" rel="stylesheet" />
-    <link href="./src/css/mentions.css" rel="stylesheet" />
+    <link href="./src/css/chatPost.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="./src/img/standard.gif">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.0/css/all.css">
 </head>
@@ -29,7 +28,8 @@
             <a class="aBoxSidebar" href="./accueil"><i class="fa-solid fa-arrow-up-right-from-square"></i> Accueil</a>
             <a class="aBoxSidebar" href="./forums"><i class="fa-solid fa-arrow-up-right-from-square"></i> Forums</a>
             <a class="aBoxSidebar" href="./staff"><i class="fa-solid fa-arrow-up-right-from-square"></i> Staff</a>
-            <a class="aBoxSidebar" href="https://discord.gg/38UJhPx7ah"><i class="fa-solid fa-arrow-up-right-from-square"></i> Support</a>
+            <a class="aBoxSidebar" href="https://discord.gg/38UJhPx7ah"><i
+                    class="fa-solid fa-arrow-up-right-from-square"></i> Support</a>
             <a class="aBoxSidebar"><i class="fa-solid fa-arrow-up-right-from-square"></i> Boutique</a>
         </div>
     </div>
@@ -49,7 +49,7 @@
                     <div class="contentBottomBoxLeft">
                         <button class="headerMenu" id="headerMenu"><i class="fa-solid fa-bars"></i></button>
                         <div class="containerLink">
-                            <a class="headerBoxLink active" href="./accueil">Accueil</a>
+                            <a class="headerBoxLink" href="./accueil">Accueil</a>
                             <a class="headerBoxLink" href="./forums">Forums</a>
                             <a class="headerBoxLink" href="./staff">Staff</a>
                             <a class="headerBoxLink" href="https://discord.gg/38UJhPx7ah">Support</a>
@@ -69,63 +69,27 @@
         </div>
     </header>
 
-    <div class="section mention">
+    <div class="section chatPost">
         <div class="container">
-            <div class="mentionBox">
-                <div class="mentionBoxTitre">règlement Minecraft</div>
-                <div class="mentionBoxDesc">
-                    0. Préambule<br><br>
-                    Ce règlement a été mis en place dans le but d'offrir une expérience de jeu optimale aux joueurs
-                    utilisant notre platforme.<br>
-                    De ce fait, le respect du règlement est obligatoire pour tout utilisateur.<br><br>
-                    Toute violation au règlement entraînera une sanction par le staff.<br>
-                    Le staff a pour obligation de respecter le tableau des sanctions défini par les Administrateurs.<br>
-                    Le règlement est voué à changer donc merci de vérifier celui-ci régulièrement.<br><br>
-                    Enfin, nous considérons que vous avez pris connaissance et avez accepté le règlement dès lors que
-                    vous vous êtes connecté sur le serveur.<br>
-                    De ce fait, vous ne pouvez pas prétendre ne pas avoir pris en compte ce règlement.
-                </div>
-                <div class="mentionBoxDesc">
-                    1. Règles des chats<br><br>
-                    Toute forme de polution telle quel le spam ou le flood est interdite.<br>
-                    Toute publicité sera sanctionné.<br>
-                    Avoir un double compte est autorisé, en revanche en avoir un alors que vous êtes banni n'est pas
-                    autorisé.<br>
-
-                    Tout message incluant des des propos haineux, incitant à la haine, discriminatoire, harcèlement et
-                    autres sont passible d'un bannissement.<br><br>
-                    Restez poli envers les autres membres, ayez un langage soutenu et respectueux.<br>
-                    La violence verbale gratuite est interdit, Vous pouvez vous amusez entre vous mais sans être
-                    violent.<br>
-
-                    Toute forme de racisme est strictement interdit (incluant les croix gammées).<br><br>
-                    Les menaces de Hack, Dox, Ransomware et autre est passible d'un bannissement définitif du serveur.<br>
-                    Les débats Politiques ne sont pas les bienvenue.<br>
-                    Si vous souhaitez contester une sanction d'un staff faite le via un Ticket Discord !<br>
-                </div>
-                <div class="mentionBoxDesc">
-                    2. Règles du jeu<br><br>
-                    Les avants postes sont soumis à quelques règles :<br>
-                    Une faction ne doit pas avoir plus de 8 claims d'AP sur chaques serveurs.<br>
-                    - Les champignons d'eau et de lave sont strictement interdits.<br>
-                    - Les bugs pour récupérer la bedrock est interdit.<br><br>
-                    - Le bug bateau et autorisé,<br>
-                    - Le tp kill est interdit,<br>
-                    - Toute duplication est strictement interdite.<br><br>
-                    - Tout cheat est interdit.<br>
-                    - Les anti afk sont interdit.<br>
-                    - Les farms sont interdites dans les AP et les Maison de Faction (blé, goleme etc),<br>
-                </div>
-                <div class="mentionBoxDesc">
-                    3. Profil du joueur<br><br>
-                    Votre profil ne doit pas être ressemblant avec un membre du staff.<br>
-                    Il ne doit pas contenir de propos haineux, raciste ou autres.<br>
-                    Les skins a caractères pornographique seront sanctionnées<br>
-                </div>
-                <div class="mentionBoxDesc">
-                    4. Client Minecraft<br><br>
-                    Il est interdit d'installer des mods pour cheats ni de modifier celui du serveur.<br>
-                    La décompilation du launcher est strictement interdit.<br>
+            <a class="aBoxAdd" id="setForum">Nouveau Messages<i class="fa-solid fa-message-plus"></i></a>
+            <div class="chatPostBox">
+                <div class="chatPostBoxTitre">Discussions Générales</div>
+                <div class="contentPostLink" id="messages">
+                    <!--<div class="chatBoxPost">
+                        <div class="content">
+                            <img src="https://minotar.net/helm/SheyzoYT/100.png">
+                        </div>
+                        <div class="content">
+                            <div class="pseudoPost"><span>SheyzoYT</span>
+                                <div class="datePost"><span>12/06/2022</span> à <span>14h30</span></div>
+                            </div>
+                            <div class="contenuPost">
+                                eronix est un serveur Minecraft PvP Factions Moddées, 100% FarmToWin!
+                                Créer en 2022, eronix vous propose une étendu sur de nombreux défis évènements et plus
+                                encore !
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -144,20 +108,25 @@
                     </p>
                     <a class="aBoxCGV"><i class="fa-solid fa-arrow-up-right-from-square"></i> Conditions générales de
                         vente</a>
-                    <a class="aBoxCGV" href="./mentions-legales"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mentions légales</a>
+                    <a class="aBoxCGV" href="./mentions-legales"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Mentions légales</a>
                 </div>
                 <div class="footerBox">
                     <div class="footer-titleBox">liens utiles</div>
-                    <a class="aBoxLink" href="./accueil"><i class="fa-solid fa-arrow-up-right-from-square"></i> Accueil</a>
-                    <a class="aBoxLink" href="./forums"><i class="fa-solid fa-arrow-up-right-from-square"></i> Forums</a>
+                    <a class="aBoxLink" href="./accueil"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Accueil</a>
+                    <a class="aBoxLink" href="./forums"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Forums</a>
                     <a class="aBoxLink" href="./staff"><i class="fa-solid fa-arrow-up-right-from-square"></i> Staff</a>
-                    <a class="aBoxLink" href="https://discord.gg/38UJhPx7ah"><i class="fa-solid fa-arrow-up-right-from-square"></i> Support</a>
+                    <a class="aBoxLink" href="https://discord.gg/38UJhPx7ah"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i> Support</a>
                     <a class="aBoxLink"><i class="fa-solid fa-arrow-up-right-from-square"></i> Boutique</a>
                 </div>
                 <div class="footerBox">
                     <div class="footer-titleBox">Nous rejoindre</div>
                     <a class="aBoxCGV"><i class="fa-solid fa-arrow-up-right-from-square"></i> Notre Launcher</a>
-                    <a class="aBoxCGV" href="https://discord.gg/38UJhPx7ah"><i class="fa-solid fa-arrow-up-right-from-square"></i> Notre Discord</a>
+                    <a class="aBoxCGV" href="https://discord.gg/38UJhPx7ah"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i> Notre Discord</a>
                 </div>
                 <div class="footerBox">
                     <div class="footer-titleBox">Nous supporter</div>
@@ -178,6 +147,57 @@
         </div>
     </div>
 
+    <div id="createForum" class="createForum">
+        <div id="createForumClose" class="createForumClose">
+            <i class="fa-solid fa-close"></i>
+        </div>
+        <form id="createForumContent">
+            <input id="forumPseudo" type="text" class="input" required placeholder="Votre pseudo Minecraft" />
+            <input id="forumDesc" type="text" class="input" required placeholder="Votre message" />
+            <button class="loginBtn" type="submit">créer <i class="fa-solid fa-right-to-bracket"></i></button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyClfPOL8YfLcQ7MBPrEV8ezj0_wIlKpkGc",
+  authDomain: "eronix-3fbef.firebaseapp.com",
+  databaseURL: "https://eronix-3fbef-default-rtdb.firebaseio.com",
+  projectId: "eronix-3fbef",
+  storageBucket: "eronix-3fbef.appspot.com",
+  messagingSenderId: "32172690240",
+  appId: "1:32172690240:web:dc4a8934fb423d3f8e08a5"
+};
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        document.getElementById('createForumContent').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const time = new Date();
+            var forumPseudo = document.getElementById("forumPseudo").value;
+            var forumDesc = document.getElementById("forumDesc").value;
+            
+            db.ref("messages/" + Date.now()).set({
+                pseudo: forumPseudo,
+                messages: forumDesc,
+                date: `${time.toLocaleDateString(undefined)}`,
+            });
+           location.reload();
+        });
+
+        const fetchChat = db.ref("messages/");
+        fetchChat.on("child_added", function (snapshot) {
+            const messages = snapshot.val();
+            const msg = `<div class="chatBoxPost"><div class="content"><img src="https://minotar.net/helm/${messages.pseudo}/100.png" alt="Error"></div><div class="content"><div class="pseudoPost"><span>${messages.pseudo}</span><div class="datePost"><span>${messages.date}</span></div></div><div class="contenuPost">${messages.messages}</div></div></div> `;
+            document.getElementById("messages").innerHTML += msg;
+        })
+
+    </script>
+
     <script>
         var headerMenu = document.getElementById("headerMenu");
         var headerMenuClose = document.getElementById("headerMenuClose");
@@ -193,6 +213,20 @@
         headerMenuClose.onclick = function () {
             headerMenu.style.display = "block";
             sidebar.style.display = "none";
+        }
+    </script>
+
+
+    <script>
+        var createForumClose = document.getElementById("createForumClose");
+        var createForum = document.getElementById("createForum");
+        var setForum = document.getElementById("setForum");
+        setForum.onclick = function () {
+            createForum.style.display = "flex";
+        }
+
+        createForumClose.onclick = function () {
+            createForum.style.display = "none";
         }
     </script>
 </body>
