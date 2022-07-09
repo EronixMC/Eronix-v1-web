@@ -228,3 +228,34 @@ body {
 .alertBox span {
     color: red;
 }
+
+
+.download {
+    background: #101010;
+}
+
+.download .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.download .container .downBox {
+    background: #4444;
+    padding: 8px 16px;
+    height: 50px;
+    width: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    display: flex;
+}
+
+.download .container .downBox a {
+    margin-left: auto;
+    margin-right: auto;
+}
