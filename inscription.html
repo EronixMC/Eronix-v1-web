@@ -176,7 +176,7 @@ const firebaseConfig = {
                 console.log(`UID is: ${userId}`);
 
                 await db.ref("users/" + userId).set({
-                    user: username,
+                    username: username,
                     password: password,
                     uid: userId,
                     email: email,
